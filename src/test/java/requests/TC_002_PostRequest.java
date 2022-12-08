@@ -1,34 +1,38 @@
 package requests;
 
-import org.testng.Assert;
+import org.json.simple.JSONObject;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 
 public class TC_002_PostRequest {
-
+	
 	@Test
-	public void postRequest() {
-		// specify base URI
-		RestAssured.baseURI = "http://localhost:3333/student";
+	public void postNewEmployees() {
+
+		JSONObject jsonString = new JSONObject();
+		jsonString.put("name", "Harsha");
+		jsonString.put("salary", "65000");
+		jsonString.put("age", "26");
+		RestAssured.baseURI = "http://dummy.restapiexample.com/api/v1/create";
+
 		RequestSpecification httpRequest = RestAssured.given();
-
-		String requestParams = "{\"first_name\":\"srinivas\",\"last_name\":\"50k\",\"mobile\":\"7745675\"}";
-
 		httpRequest.contentType(ContentType.JSON);
-		httpRequest.body(requestParams); // attach above data to the request
-
-		// response object
+		// Adding body as string
+		httpRequest.body(jsonString.toString());
+		// Calling POST method
 		Response response = httpRequest.post();
-		// print response
-		String res = response.getBody().asString();
-		System.out.println(res);
+		// Let's print response body.
+		response.prettyPrint();
+		ValidatableResponse vr = response.then();
+		// Check status code
+		vr.statusCode(200);
+		// It will check if status line is as expected
+		vr.statusLine("HTTP/1.1 200 OK");
 
-		System.out.println(response.getStatusCode());
-		Assert.assertEquals(response.getStatusCode(), 201);
 	}
-
 }
