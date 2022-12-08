@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-08T11:19:11 IST" name="Default suite" finished-at="2022-12-08T11:19:12 IST" duration-ms="1213">
+  <suite started-at="2022-12-08T13:13:17 IST" name="Default suite" finished-at="2022-12-08T13:13:18 IST" duration-ms="1624">
     <groups>
     </groups>
-    <test started-at="2022-12-08T11:19:11 IST" name="Default test" finished-at="2022-12-08T11:19:12 IST" duration-ms="1213">
-      <class name="requests.TC_003_GetRequest">
-        <test-method signature="postRequest()[pri:0, instance:requests.TC_003_GetRequest@2a54a73f]" started-at="2022-12-08T11:19:11 IST" name="postRequest" finished-at="2022-12-08T11:19:12 IST" duration-ms="1176" status="PASS">
+    <test started-at="2022-12-08T13:13:17 IST" name="Default test" finished-at="2022-12-08T13:13:18 IST" duration-ms="1624">
+      <class name="requests.TC_002_PostRequest">
+        <test-method signature="postRequest()[pri:0, instance:requests.TC_002_PostRequest@25084a1e]" started-at="2022-12-08T13:13:17 IST" name="postRequest" finished-at="2022-12-08T13:13:18 IST" duration-ms="1575" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postRequest -->
-      </class> <!-- requests.TC_003_GetRequest -->
+      </class> <!-- requests.TC_002_PostRequest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
