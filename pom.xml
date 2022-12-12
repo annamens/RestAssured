@@ -31,6 +31,22 @@
     <version>1.1.1</version>
 </dependency>
 <dependency>
+    <groupId>br.com.starcode.parccser</groupId>
+    <artifactId>parccser</artifactId>
+    <version>1.1.3-RELEASE</version>
+</dependency>
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.3.1</version>
+</dependency>
+<dependency>
+    <groupId>org.webjars.npm</groupId>
+    <artifactId>saucelabs</artifactId>
+    <version>1.0.1</version>
+</dependency>
+
+<dependency>
     <groupId>org.apache.poi</groupId>
     <artifactId>poi</artifactId>
     <version>5.2.3</version>
